@@ -72,7 +72,7 @@ int main ()
                 }
             }
         }
-        for (int x = videoCount-1; x >= 0; x--)
+        for (int x = 0; x < videoCount; x++)
         {
         Videos[x]->print();
         }
@@ -91,7 +91,7 @@ int main ()
                 }
             }
         }
-        for (int x = videoCount-1; x >= 0; x--)
+        for (int x = 0; x < videoCount; x++)
         {
         Videos[x]->print();
         }

@@ -54,6 +54,11 @@ int main ()
                 }
             }
         }
+        for (int x = videoCount-1; x >= 0; x--)
+        {
+        Videos[x]->print();
+        }
+        return 0;
     }
     else if (sortingMethod == "title")
     {
@@ -86,12 +91,13 @@ int main ()
                 }
             }
         }
-    }
-    for (int x = videoCount-1; x >= 0; x--)
-    {
+        for (int x = videoCount-1; x >= 0; x--)
+        {
         Videos[x]->print();
+        }
+        return 0;
     }
-
+    
 
 return 0;
 }

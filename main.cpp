@@ -39,8 +39,8 @@ int main ()
             return 1; //terminates the program
         }
         Videos[i] = new video(title, url, comment, length, rating); //stores the user inputs using the array of video pointers (Videos[i])
-        videoCount = i; //sets videoCount to the current value of i
         i++; //iterates
+        videoCount = i; //sets videoCount to the current value of i
     }
 
     if (sortingMethod == "rating") //code for sorting if rating sort was selected

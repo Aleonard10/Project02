@@ -32,7 +32,7 @@ int main ()
         cin >> length;
         cin >> rating;
         cin.ignore();
-        if (videoCount > 100)
+        if (videoCount > 99)
         {
             cerr << "Too many videos, giving up." << endl;
             return 1;

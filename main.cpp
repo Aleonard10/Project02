@@ -1,13 +1,18 @@
 #include <string>
 #include <iostream>
 #include "video.h"
+#include "vlist.h"
 
 using namespace std;
 
 int main ()
 {
     const int MAX = 100;
+    vlist List;
     video* Videos[MAX]; // this code creates an array of video pointers of size MAX(100)
+    //Videos[0] = new video("asfgr", "qweqw", "ads", 2.2, 2);
+    //List.insert_at_end(Videos[0]);
+    //List.print();
 
     string sortingMethod; //variable to store user input sorting method
     cin >> sortingMethod; //cin for user input sorthing method
@@ -39,6 +44,7 @@ int main ()
             return 1;
         }
         Videos[i] = new video(title, url, comment, length, rating); //stores the user inputs using the array of video pointers (Videos[i])
+        List.insert(Videos[i]);
         i++; //iterates
         videoCount = i; //sets videoCount to the current value of i
     }
@@ -55,10 +61,10 @@ int main ()
                 }
             }
         }
-        for (int x = videoCount-1; x >= 0; x--) //loop used to output the sorted videos in decending order
-        {
-        Videos[x]->print(); //prints out the current video being indexed
-        }
+        //for (int x = videoCount-1; x >= 0; x--) //loop used to output the sorted videos in decending order
+        
+        List.print(); //prints out the current video being indexed
+        
         return 0;
     }
      else if (sortingMethod == "title") //code for sorting if title sort was selected (alphabetical)
@@ -73,10 +79,10 @@ int main ()
                 }
             }
         }
-        for (int x = 0; x < videoCount; x++) //loop used to output the sorted videos in ascending order
+        /*for (int x = 0; x < videoCount; x++) //loop used to output the sorted videos in ascending order
         {
         Videos[x]->print(); //prints out the current video being indexed
-        }
+        }*/
         return 0;
 
     }
